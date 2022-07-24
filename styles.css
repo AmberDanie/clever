@@ -1,0 +1,277 @@
+:root {
+  /*grey colors*/
+  /*--color1: #C0C0C0;
+  --color2: #a18b8b;*/
+
+  /*green colors*/
+  --color-main: #71d398;  
+  --color-hover: #309158;
+}
+
+*, ::after, ::before {
+  margin: 0;
+  padding: 0; 
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  word-spacing: 0.8rem;
+}
+
+#clover-text {
+  position:absolute;
+  height: 1.5em;
+  left: 2.25em;
+  top: 2.5em;
+}
+
+/* logo */
+
+#logo:hover {
+  cursor: default;
+  filter: invert(30%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(90%) contrast(90%);
+}
+
+#logo:hover #clover-text {
+  top: 1.25em;
+}
+
+/* space container */
+
+.indent {
+  width: 100%;
+  height: 1em;
+}
+
+/* page body */
+
+body {
+  width: 80%; 
+  align-items: center;  
+  justify-content: center;
+  margin: auto;
+  padding-top: 0.5em;
+}
+
+/* header */
+
+.static {
+  background: white;
+  z-index: 100;
+  position: sticky; 
+  top: 0 ;
+  left: 0; 
+  right: 0;
+}
+
+#upper-header {
+  box-sizing: content-box;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1%;
+}
+
+#profile-icon {
+  margin-top: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+#profile:hover {
+  cursor: pointer;
+  filter: invert(30%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(90%) contrast(90%);
+}
+
+#lower-header {
+  display: flex;
+  padding-left: 0.25em;
+}
+
+#lower-header a {
+  font-size: 1.25em;
+  text-decoration: none;
+  color: var(--color-main);
+}
+
+#lower-header a:first-of-type {
+  margin-right: 1em;
+}
+
+#lower-header p {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+#lower-header a.is-active {
+  color: black;
+  font-weight: bold;
+}
+
+#lower-header a:visited {
+  color: 	var(--color-main); 
+}
+
+#lower-header a:hover:not(.is-active) {
+  cursor: pointer;
+  color: var(--color-hover);
+}
+
+/* Profile user page */
+
+#back-to-main-ref:hover {
+  filter: invert(30%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(90%) contrast(90%);
+}
+
+#back-to-main {
+  height: 1.5rem;
+}
+
+#back-profile {
+  margin-top: -2.75rem;
+  margin-left: 2rem;
+  font-size: 2.5rem;
+}
+
+.cur-profile { 
+  position:relative;
+  width: 100%;
+  margin-bottom: 2.75rem;
+}
+
+.cur-profile .user-img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.cur-profile  .discription {
+  margin-left: 0.75rem;
+}
+
+.cur-profile .discription p {
+  font-size: 2rem;
+  margin-top: -0.5rem;
+  letter-spacing: -0.05rem;
+}
+
+#follow-button {
+  margin-left: 0.125rem;
+  margin-top: 0.75rem;
+  text-align: center;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
+  background: #222222;
+  border-radius: 4px;
+  color: #DEDEDE;
+  cursor: pointer;
+  font-family: 'Roboto';
+  font-style: normal; 
+}
+
+.date {
+  color: var(--color-hover);
+}
+
+/* main block of the page */
+
+main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;  
+
+}
+
+/* user info and post */
+
+.discription {
+  margin-left: 2%;
+  width: 100%;
+}
+
+.user-post {  
+  width: 30%;
+  padding-bottom: 3%;
+}
+
+.user-info {
+  display: flex;
+}
+
+.user-info a {
+  color: var(--color-main);
+}
+
+.user-info a:hover {
+  cursor: pointer;
+  color: var(--color-hover);
+}
+
+.user-img {
+  border-radius: 100%;
+  width: 3em;
+  height: 3em;
+}
+
+.post-text  {
+  margin: -0.5em 0;
+  letter-spacing: 0.6px;
+}
+
+.is-visible {
+  width: 100%;
+  border-radius: 0.2em;
+  margin: 1em 0;
+  height: auto;
+  background-color: var(--color-main); 
+
+}
+
+.all-posts {
+  text-decoration: none;
+}
+
+@media (min-width: 1921px) {
+  .is-visible {
+    width: 30rem;
+  }
+}
+
+@media   (max-width: 960px) {
+  .user-post {  
+    width: 45%;
+  }
+  .user-info a, .user-info p {
+    font-size: 1.25em;
+  }
+  .user-img {
+    width: 4em;
+    height: 3.5em; 
+  }
+  .post-text {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-post {  
+    width: 100%;
+  }
+  .user-info a, .user-info p {
+    font-size: 1.5em;
+  }
+  .user-img {
+    width: 5em;
+    height: 4em;
+  }
+  .post-text {
+    font-size: 0.7em;
+    margin-bottom: 0.5em;
+  }
+  .is-visible {
+    height: 16em;
+  }
+}
