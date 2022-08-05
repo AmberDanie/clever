@@ -158,6 +158,18 @@ body {
   letter-spacing: -0.05rem;
 }
 
+#your-profile-name {
+  width: 90%;
+}
+
+#profile-change {
+  height: 8rem;
+  background-color: grey; 
+  position: relative;
+  display: flex;
+  width: 33%;
+}
+
 #follow-button {
   margin-left: 0.125rem;
   margin-top: 0.75rem;
